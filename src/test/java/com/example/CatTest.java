@@ -10,8 +10,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
     private Cat cat;
@@ -39,6 +37,6 @@ public class CatTest {
 
     @Test
     public void testGetSound() {
-        assertEquals("Кот должен мяукать", "Мяу", cat.getSound());
+        Assert.assertEquals("Кот должен мяукать", "Мяу", cat.getSound());
     }
 }
