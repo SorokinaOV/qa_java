@@ -21,22 +21,25 @@ public class FelineTest {
 
     @Test
     public void testGetKittensTest() {
+        int expected = 1;
+        Feline feline = new Feline();
         int actual = feline.getKittens();
-        Mockito.verify(feline).getKittens(1);
-        Assert.assertEquals("Количество хищников не соответствует", 1, feline.getKittens());
+        Assert.assertEquals("Количество хищников не соответствует",expected, actual);
     }
 
     @Test
     public void testGetKittens() {
+        int expected = 5;
+        Feline feline = new Feline();
         int actual = feline.getKittens(5);
-        Mockito.verify(feline).getKittens(Mockito.anyInt());
-        Assert.assertEquals("Количество хищников не соответствует", 5, actual);
+        Assert.assertEquals("Количество хищников не соответствует",expected, actual);
     }
 
     @Test
     public void testGetFamily() {
+        String expected = "Кошачьи";
+        Feline feline = new Feline();
         String actual = feline.getFamily();
-        Mockito.verify(feline, Mockito.times(1)).getFamily();
-        Assert.assertEquals("Наименование семейства не соответствует", "Кошачьи", actual);
+        Assert.assertEquals("Наименование семейства не соответствует",expected, actual);
     }
 }

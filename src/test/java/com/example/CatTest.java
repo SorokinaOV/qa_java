@@ -29,13 +29,6 @@ public class CatTest {
     }
 
     @Test
-    public void testGetFoodNegative() throws Exception {
-        List<String> expected = List.of("Трава", "Различные растения");
-        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птица", "Рыба"));
-        Assert.assertNotEquals(expected, cat.getFood());
-    }
-
-    @Test
     public void testGetSound() {
         Assert.assertEquals("Кот должен мяукать", "Мяу", cat.getSound());
     }

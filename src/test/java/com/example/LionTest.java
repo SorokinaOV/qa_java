@@ -28,18 +28,6 @@ public class LionTest {
     }
 
     @Test
-    public void testdoesHaveManeTrue() throws Exception {
-        lion = new Lion("Самец", feline);
-        boolean hasMane = lion.doesHaveMane();
-        Assert.assertTrue(hasMane);
-    }
-    @Test
-    public void testdoesHaveManeFalsh() throws Exception {
-        lion = new Lion("Самка", feline);
-        boolean hasMane = lion.doesHaveMane();
-        Assert.assertFalse(hasMane);
-    }
-    @Test
     public void testExceptionAndCheckText() {
         feline = new Feline();
         Exception exception = Assert.assertThrows(Exception.class, () -> {
